@@ -1,0 +1,4 @@
+Lombard – Wymagania Biznesowe
+
+
+Potrzebny jest schemat diagramu encji dla Lombardu. Baza danych będzie musiała przechowywać dane personalne klientów, imię, nazwisko, adres zamieszkania, pesel , numer i seria dowodu osobistego. W lombardzie pracować będą pracownicy podlegający jednemu lub więcej szefowi. Jednemu szefowi podlega jeden lub więcej pracowników. Dane na temat pracowników , dane adresowe, rodzaj umowy, pensja, muszą być również zapisane. Klient może mieć zawartą jedną lub więcej umowę kupna-sprzedaży. W umowie określamy kwotę, datę zawarcia, datę zakończenia umowy, kwotę podatku, oraz upoważnienie. Przy czym jedna umowa może należeć tylko do jednego klienta. W jednej umowie może być zawarte wiele rzeczy pod zastaw. Przy czym dana rzecz musi pochodzić tylko z jednej konkretnej umowy. Pracownicy muszą wiedzieć co mają wystawione na sprzedaż, za jaka kwotę oraz z jakiej umowy jest dana rzecz.	
