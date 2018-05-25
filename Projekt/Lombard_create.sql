@@ -35,7 +35,7 @@ CREATE TABLE Osoba (
     Miasto_ID_Miasta integer  NOT NULL,
     Ulica varchar2(20)  NOT NULL,
     Numer_Domu varchar2(20)  NOT NULL,
-    Numer_Mieszkania varchar2(20)  NOT NULL,
+    Numer_Mieszkania varchar2(20) ,
     CONSTRAINT Osoba_pk PRIMARY KEY (ID_Osoby)
 ) ;
 
@@ -44,7 +44,7 @@ CREATE TABLE Pracownik (
     ID_Pracownika integer  NOT NULL,
     Pensja number(10,1)  NOT NULL,
     Typ_Umowy_ID_Typu integer  NOT NULL,
-    ID_Szefa integer  NOT NULL,
+    ID_Szefa integer,
     CONSTRAINT Pracownik_ak_1 UNIQUE (ID_Szefa),
     CONSTRAINT Pracownik_pk PRIMARY KEY (ID_Pracownika)
 ) ;
@@ -52,7 +52,7 @@ CREATE TABLE Pracownik (
 -- Table: Rzecz_Na_Sprzedaz
 CREATE TABLE Rzecz_Na_Sprzedaz (
     ID_Rzecz_Sprzed integer  NOT NULL,
-    Cena_Sprzedazy number(100,1)  NOT NULL,
+    Cena_Sprzedazy number(5,1)  NOT NULL,
     CONSTRAINT Rzecz_Na_Sprzedaz_pk PRIMARY KEY (ID_Rzecz_Sprzed)
 ) ;
 
@@ -69,7 +69,7 @@ CREATE TABLE Rzecz_pod_Zastaw (
 -- Table: Typ_Umowy
 CREATE TABLE Typ_Umowy (
     ID_Typu integer  NOT NULL,
-    Nazwa_Typu_Umowy varchar2(20)  NOT NULL,
+    Nazwa_Typu_Umowy varchar2(30)  NOT NULL,
     CONSTRAINT Typ_Umowy_pk PRIMARY KEY (ID_Typu)
 ) ;
 
@@ -78,10 +78,10 @@ CREATE TABLE Umowa_Kupna_Sprzedazy (
     ID_Umowy integer  NOT NULL,
     Data_Podpisania date  NOT NULL,
     Data_Zakonczenia date  NOT NULL,
-    Kwota_Umowy number(100,1)  NOT NULL,
-    Kwota_Podatku number(100,1)  NOT NULL,
-    Upowaznienie_Imie varchar2(15)  NOT NULL,
-    Upowaznienie_Nazwisko varchar2(15)  NOT NULL,
+    Kwota_Umowy number(5,1)  NOT NULL,
+    Kwota_Podatku number(5,1),
+    Upowaznienie_Imie varchar2(20),
+    Upowaznienie_Nazwisko varchar2(30),
     Klient_ID_Klienta integer  NOT NULL,
     CONSTRAINT Umowa_Kupna_Sprzedazy_pk PRIMARY KEY (ID_Umowy)
 ) ;
